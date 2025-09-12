@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .container{
+            display:block;
+        }
+        .fa{
+            cursor: pointer;
+        }
+        .cartIcon{
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cartIcon">
+        <i class="fa fa-shopping-cart">🛒</i>
+        <span class="cartCount">0</span>
+        <span class="closeCart hide">x</span>
+    </div>
+    <div class="container">
+        <p >Food</p >
+        <p >1.50</p >
+        <button class="lat" data-name="Food" data-price="1.50">buy</button>
+    </div>
+
+    <script>
+        let cartCounts = 0;
+        let cart = [];
+        let cartIcon = document.querySelector('.fa');
+        let closeCart = document.querySelector('.closeCart');
+        let container = document.querySelector('.container');
+        let btns = document.querySelector('.lat');
+        let count = document.querySelector('.cartCount');
+
+        cartIcon.addEventListener("click", ()=>{
+            closeCart.classList.toggle('hide');
+        })
+        count.addEventListener("click", ()=>{
+            cartCounts++;
+        })
+
+        btns.addEventListener("click", ()=>{
+            const name = this.getAttribute('data-name');
+                    const price = parseFloat(this.getAttribute('data-price'));
+                    
+            cart.push({
+                name: name,
+                price: price
+            })
+            cartCounts++;
+            
+        })
+      function addCart(name, price){
+        const extItem = cart.find(item => item.name === name);
+        cart.push({
+            name: name,
+            price: price
+        })
+      }
+        
+    </script>
+</body>
+</html>

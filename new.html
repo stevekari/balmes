@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 1em;
+            text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            .menu-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .card-body {
+                padding: 20px;
+            }
+            
+            .card h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="menu-container">
+            <div class="card">
+                <img src="images/cappuccino.jpg" alt="Cappuccino" />
+                <div class="card-body">
+                    <h2>Cappuccino</h2>
+                    <p>
+                        The term "cappuccino" comes from the Italian word "cappuccio," which
+                        means "hood" or "cap." The "ino" suffix makes it diminutive, so
+                        "cappuccino" essentially means "small cap."
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Espresso.jpg" alt="Espresso" />
+                <div class="card-body">
+                    <h2>Espresso</h2>
+                    <p>
+                        A concentrated coffee drink brewed by forcing hot water through finely-ground coffee beans.
+                        The perfect base for many other coffee drinks.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Latte.jpg" alt="Latte" />
+                <div class="card-body">
+                    <h2>Latte</h2>
+                    <p>
+                        A coffee drink made with espresso and steamed milk. The word "latte" comes from the Italian
+                        "caffè latte," which means "milk coffee."
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Americano.jpg" alt="Americano" />
+                <div class="card-body">
+                    <h2>Americano</h2>
+                    <p>
+                        A type of coffee drink prepared by diluting an espresso with hot water, giving it a similar
+                        strength to, but different flavor from, traditionally brewed coffee.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Macchiato.jpg" alt="Macchiato" />
+                <div class="card-body">
+                    <h2>Macchiato</h2>
+                    <p>
+                        An espresso coffee drink with a small amount of milk, usually foamed. The word "macchiato"
+                        means "spotted" or "stained" in Italian.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Mocha.jpg" alt="Mocha" />
+                <div class="card-body">
+                    <h2>Mocha</h2>
+                    <p>
+                        A chocolate-flavored coffee drink that is a variant of a latte. It consists of espresso,
+                        hot milk, and chocolate syrup or powder.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Flat Whit.jpg" alt="Flat White" />
+                <div class="card-body">
+                    <h2>Flat White</h2>
+                    <p>
+                        A coffee drink consisting of espresso with microfoam (steamed milk with small, fine bubbles).
+                        It originated in Australia and New Zealand.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Cortado.jpg" alt="Cortado" />
+                <div class="card-body">
+                    <h2>Cortado</h2>
+                    <p>
+                        A Spanish coffee drink consisting of espresso mixed with a roughly equal amount of warm milk
+                        to reduce the acidity. The word "cortado" means "cut" in Spanish.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Affogato.jpg" alt="Affogato" />
+                <div class="card-body">
+                    <h2>Affogato</h2>
+                    <p>
+                        An Italian coffee-based dessert consisting of a scoop of vanilla ice cream "drowned" in a
+                        shot of hot espresso. Perfect for dessert lovers!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

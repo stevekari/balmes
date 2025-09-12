@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="cafe.css">
+  <link rel="stylesheet" href="footer.css">
+  
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img class="logo" src="images/logos/kari.png" alt="Logo" />
+      <ul>
+        <li><a href="index.html">Inicia</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="cafe.html">Cafe</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+
+        <div class="logins">
+          <span><i class="fa-solid fa-user"></i></span>
+          <a class="btn">Login</a>
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+          <div class="cart-icon"   id="cartOpen">
+            <i class="fa-solid fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-count">0</span>
+          </div>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Menú de café</h1>
+
+  <div>
+    <div class="main-container">
+        <div class="menu-container">
+            <div class="card" >
+               <a href="tienda.html" data-name="cappuccino"> <img src="images/cappuccino.jpg" alt="Cappuccino" /></a>
+                <div class="card-body">
+                    <h2>Cappuccino</h2>
+                    <p>
+                        The term "cappuccino" comes from the Italian word "cappuccio," which
+                        means "hood" or "cap." The "ino" suffix makes it diminutive, so
+                        "cappuccino" essentially means "small cap."
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" href="tienda.html">
+                <a  href="tienda.html" data-name="espresso"><img src="images/Espresso.jpg" alt="Espresso" /></a>
+                <div class="card-body">
+                    <h2>Espresso</h2>
+                    <p>
+                        A concentrated coffee drink brewed by forcing hot water through finely-ground coffee beans.
+                        The perfect base for many other coffee drinks.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+               <a  href="tienda.html" data-name="latte"> <img src="images/Latte.jpg" alt="Latte" /></a>
+                <div class="card-body">
+                    <h2>Latte</h2>
+                    <p>
+                        A coffee drink made with espresso and steamed milk. The word "latte" comes from the Italian
+                        "caffè latte," which means "milk coffee."
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+               <a  href="tienda.html" data-name="americano"> <img src="images/Americano.jpg" alt="Americano" /></a>
+                <div class="card-body">
+                    <h2>Americano</h2>
+                    <p>
+                        A type of coffee drink prepared by diluting an espresso with hot water, giving it a similar
+                        strength to, but different flavor from, traditionally brewed coffee.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+              <a  href="tienda.html" data-name="macchiato"> <img src="images/Macchiato.jpg" alt="Macchiato" /></a> 
+                <div class="card-body">
+                    <h2>Macchiato</h2>
+                    <p>
+                        An espresso coffee drink with a small amount of milk, usually foamed. The word "macchiato"
+                        means "spotted" or "stained" in Italian.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+              <a  href="tienda.html" data-name="mocha">  <img src="images/Mocha.jpg" alt="Mocha" /></a>
+                <div class="card-body">
+                    <h2>Mocha</h2>
+                    <p>
+                        A chocolate-flavored coffee drink that is a variant of a latte. It consists of espresso,
+                        hot milk, and chocolate syrup or powder.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+              <a  href="tienda.html" data-name="flat">  <img src="images/Flat Whit.jpg" alt="Flat White" /></a>
+                <div class="card-body">
+                    <h2>Flat White</h2>
+                    <p>
+                        A coffee drink consisting of espresso with microfoam (steamed milk with small, fine bubbles).
+                        It originated in Australia and New Zealand.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+              <a  href="tienda.html" data-name="cortado"> <img src="images/Cortado.jpg" alt="Cortado" /></a> 
+                <div class="card-body">
+                    <h2>Cortado</h2>
+                    <p>
+                        A Spanish coffee drink consisting of espresso mixed with a roughly equal amount of warm milk
+                        to reduce the acidity. The word "cortado" means "cut" in Spanish.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+              <a  href="tienda.html" data-name="affogato"> <img src="images/Affogato.jpg" alt="Affogato" /></a> 
+                <div class="card-body">
+                    <h2>Affogato</h2>
+                    <p>
+                        An Italian coffee-based dessert consisting of a scoop of vanilla ice cream "drowned" in a
+                        shot of hot espresso. Perfect for dessert lovers!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+ 
+  <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section logo-section">
+                <h3>Steve Coffee</h3>
+                <div class="logo-container">
+                    <img src="images/logos/kari.png" alt="Steve Coffee Logo" />
+                </div>
+                <p class="brand-description">
+                    Donde cada taza cuenta una historia. Café artesanal de la más alta calidad en el corazón de Terrassa.
+                </p>
+            </div>
+
+            <div class="footer-section nav-section">
+                <h3>Navegación</h3>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="cafe.html">Nuestro Café</a></li>
+                        <li><a href="tienda.html">Tienda</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-section contact-section">
+                <h3>Contáctanos</h3>
+                <div class="address-info">
+                    <p><span>📍</span>Carretera de Rubí<br />Terrassa, 08223<br />Barcelona, España</p>
+                    <p><span>📞</span>+34 937 123 456</p>
+                    <p><span>📧</span>info@stevecoffee.com</p>
+                    <p><span>🕒</span>Lun - Dom: 7:00 - 22:00</p>
+                </div>
+                <div class="search-container">
+                    <input type="search" class="search-input" name="search" placeholder="Buscar en nuestro sitio..." />
+                    <button type="submit" class="search-button" aria-label="Buscar"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-section">
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d135315.41660475457!2d2.2331354888627533!3d41.45925562576607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ses!4v1752511838591!5m2!1sen!2ses" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación de Steve Coffee en Terrassa">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Steve Coffee. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Instagram">📸</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+                <a href="#" aria-label="WhatsApp">💬</a>
+            </div>
+        </div>
+    </footer>
+
+  <script src="cafe.js"></script>
+</body>
+
+</html>

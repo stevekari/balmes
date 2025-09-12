@@ -1,0 +1,223 @@
+/* *{
+     background: 
+    linear-gradient(rgba(242, 239, 239, 0.9), rgba(253, 250, 250, 0.9)),
+    url('https://cdn.pixabay.com/photo/2018/01/31/09/57/coffee-3120750_1280.jpg');
+
+}
+
+.containers{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 300px);
+    gap: 20px;
+
+    padding: 0;
+    margin: 0;
+}
+
+
+h1{
+    text-align: center;
+    
+}
+.card{
+    width: 300px;
+    height: 470px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: transparent rgba(242, 239, 239, 0.7);
+    box-shadow: 2px 3px salmon;
+    cursor: pointer;
+    
+}
+
+.card:hover{
+    animation: cardMove 2s forwards ease-in-out;
+    cursor: pointer;
+
+}
+@keyframes cardMove{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(20px);
+    }
+    75%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateY(0);
+        background-image: url("https://cdn.pixabay.com/photo/2018/01/31/09/57/coffee-3120750_1280.jpg");
+        
+    }
+}
+.card img{
+    width: 298px;
+    height: 45%;
+    border-radius: 10px 10px 0 0;
+    object-fit: fill;
+    
+}
+.card .card-body{
+    margin: 20px;
+    font-size: 18px;
+}
+.description div{
+    text-align: justify;
+    font-size: 20px;
+    
+    
+}
+.pricio, .sin, .leche{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+   
+}
+.pricio small, .sin small, .leche small{
+   font-size: 18px;
+   padding-right: 10px;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: salmon;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor:progress;
+    transition: width 0.5s;
+}
+
+button:hover{
+    background-color: #FFC080;
+
+} */
+
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #6F4E37;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.containers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease forwards;
+    opacity: 0;
+}
+
+/* Animation for card appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay animations for each card */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card:nth-child(7) { animation-delay: 0.7s; }
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h2 {
+    margin-top: 0;
+    color: #6F4E37;
+}
+
+.description {
+    margin: 15px 0;
+}
+
+.description div {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #6F4E37;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a3c29;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Pulse animation for price */
+.pricio small {
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}

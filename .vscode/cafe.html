@@ -1,0 +1,510 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cafe.css">
+</head>
+<body>
+    <h1>Menu de Cafe</h1>
+    <div class="containers">
+
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2019/07/13/11/44/coffee-4334647_1280.jpg" alt="">
+            <div class="card-body">
+                <h2>Cappuccino</h2>
+                <div class="description">
+                    <div><p class="pricio">Pricio: <small>€5,00</small></p></div>
+                    <div><p class="sin">Sin Azucar <small>0%</small></p></div>
+                    <div><p class="leche">Leche <small>40gr</small></p></div>
+                </div>
+                <button>Comprar</button>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2018/10/19/16/46/coffee-3759005_1280.jpg" alt="">
+            <div class="card-body">
+                <h2>Cappuccino</h2>
+                <div class="description">
+                    <div><p class="pricio">Pricio: <small>€5,00</small></p></div>
+                    <div><p class="sin">Sin Azucar <small>0%</small></p></div>
+                    <div><p class="leche">Leche <small>40gr</small></p></div>
+                </div>
+                <button>Comprar</button>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2021/01/31/06/36/coffee-5965985_1280.jpg" alt="">
+            <div class="card-body">
+                <h2>Cappuccino</h2>
+                <div class="description">
+                    <div><p class="pricio">Pricio: <small>€5,00</small></p></div>
+                    <div><p class="sin">Sin Azucar <small>0%</small></p></div>
+                    <div><p class="leche">Leche <small>40gr</small></p></div>
+                </div>
+                <button>Comprar</button>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2019/09/19/07/26/coffee-4488466_1280.jpg" alt="">
+            <div class="card-body">
+                <h2>Cappuccino</h2>
+                <div class="description">
+                    <div><p class="pricio">Pricio: <small>€5,00</small></p></div>
+                    <div><p class="sin">Sin Azucar <small>0%</small></p></div>
+                    <div><p class="leche">Leche <small>40gr</small></p></div>
+                </div>
+                <button>Comprar</button>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2018/10/06/11/22/coffee-3727673_1280.jpg" alt="">
+            <div class="card-body">
+                <h2>Cappuccino</h2>
+                <div class="description">
+                    <div><p class="pricio">Pricio: <small>€5,00</small></p></div>
+                    <div><p class="sin">Sin Azucar <small>0%</small></p></div>
+                    <div><p class="leche">Leche <small>40gr</small></p></div>
+                </div>
+                <button>Comprar</button>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2019/07/13/11/44/coffee-4334647_1280.jpg" alt="">
+            <div class="card-body">
+                <h2>Cappuccino</h2>
+                <div class="description">
+                    <div><p class="pricio">Pricio: <small>€5,00</small></p></div>
+                    <div><p class="sin">Sin Azucar <small>0%</small></p></div>
+                    <div><p class="leche">Leche <small>40gr</small></p></div>
+                </div>
+                <button>Comprar</button>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2021/08/21/06/23/coffee-6561887_1280.jpg" alt="">
+            <div class="card-body">
+                <h2>Cappuccino</h2>
+                <div class="description">
+                    <div><p class="pricio">Pricio: <small>€5,00</small></p></div>
+                    <div><p class="sin">Sin Azucar <small>0%</small></p></div>
+                    <div><p class="leche">Leche <small>40gr</small></p></div>
+                </div>
+                <button>Comprar</button>
+            </div>
+        
+        
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Cafe</title>
+    <link rel="stylesheet" href="cafe.css">
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #6F4E37;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .containers {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        /* Animation for card appearance */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Delay animations for each card */
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(5) { animation-delay: 0.5s; }
+        .card:nth-child(6) { animation-delay: 0.6s; }
+        .card:nth-child(7) { animation-delay: 0.7s; }
+
+        /* Hover effect */
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body h2 {
+            margin-top: 0;
+            color: #6F4E37;
+        }
+
+        .description {
+            margin: 15px 0;
+        }
+
+        .description div {
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            background-color: #6F4E37;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #5a3c29;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Pulse animation for price */
+        .pricio small {
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Cart styles */
+        .cart-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+            max-width: 300px;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .cart-items {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-total {
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #6F4E37;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Animation for added items */
+        @keyframes addedToCart {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .added {
+            animation: addedToCart 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-icon" id="cartIcon">
+        🛒
+        <span class="cart-count hidden" id="cartCount">0</span>
+    </div>
+
+    <div class="cart-container hidden" id="cartContainer">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button id="closeCart">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here -->
+        </div>
+        <div class="cart-total">
+            Total: €<span id="cartTotal">0.00</span>
+        </div>
+    </div>
+
+    <h1>Menu de Cafe</h1>
+    <div class="containers">
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2019/07/13/11/44/coffee-4334647_1280.jpg" alt="">
+            <div class="card-body">
+                <h2>Cappuccino</h2>
+                <div class="description">
+                    <div><p class="pricio">Precio: <small>€5,00</small></p></div>
+                    <div><p class="sin">Sin Azucar <small>0%</small></p></div>
+                    <div><p class="leche">Leche <small>40gr</small></p></div>
+                </div>
+                <button class="buy-btn" data-name="Cappuccino" data-price="5.00">Comprar</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2018/10/19/16/46/coffee-3759005_1280.jpg" alt="">
+            <div class="card-body">
+                <h2>Latte</h2>
+                <div class="description">
+                    <div><p class="pricio">Precio: <small>€4,50</small></p></div>
+                    <div><p class="sin">Sin Azucar <small>0%</small></p></div>
+                    <div><p class="leche">Leche <small>60gr</small></p></div>
+                </div>
+                <button class="buy-btn" data-name="Latte" data-price="4.50">Comprar</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2021/01/31/06/36/coffee-5965985_1280.jpg" alt="">
+            <div class="card-body">
+                <h2>Espresso</h2>
+                <div class="description">
+                    <div><p class="pricio">Precio: <small>€3,00</small></p></div>
+                    <div><p class="sin">Sin Azucar <small>0%</small></p></div>
+                    <div><p class="leche">Sin Leche</p></div>
+                </div>
+                <button class="buy-btn" data-name="Espresso" data-price="3.00">Comprar</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2019/09/19/07/26/coffee-4488466_1280.jpg" alt="">
+            <div class="card-body">
+                <h2>Mocha</h2>
+                <div class="description">
+                    <div><p class="pricio">Precio: <small>€5,50</small></p></div>
+                    <div><p class="sin">Con Azucar <small>10%</small></p></div>
+                    <div><p class="leche">Leche <small>50gr</small></p></div>
+                </div>
+                <button class="buy-btn" data-name="Mocha" data-price="5.50">Comprar</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2018/10/06/11/22/coffee-3727673_1280.jpg" alt="">
+            <div class="card-body">
+                <h2>Americano</h2>
+                <div class="description">
+                    <div><p class="pricio">Precio: <small>€3,50</small></p></div>
+                    <div><p class="sin">Sin Azucar <small>0%</small></p></div>
+                    <div><p class="leche">Sin Leche</p></div>
+                </div>
+                <button class="buy-btn" data-name="Americano" data-price="3.50">Comprar</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2019/07/13/11/44/coffee-4334647_1280.jpg" alt="">
+            <div class="card-body">
+                <h2>Macchiato</h2>
+                <div class="description">
+                    <div><p class="pricio">Precio: <small>€4,00</small></p></div>
+                    <div><p class="sin">Sin Azucar <small>0%</small></p></div>
+                    <div><p class="leche">Leche <small>20gr</small></p></div>
+                </div>
+                <button class="buy-btn" data-name="Macchiato" data-price="4.00">Comprar</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2021/08/21/06/23/coffee-6561887_1280.jpg" alt="">
+            <div class="card-body">
+                <h2>Flat White</h2>
+                <div class="description">
+                    <div><p class="pricio">Precio: <small>€4,80</small></p></div>
+                    <div><p class="sin">Sin Azucar <small>0%</small></p></div>
+                    <div><p class="leche">Leche <small>50gr</small></p></div>
+                </div>
+                <button class="buy-btn" data-name="Flat White" data-price="4.80">Comprar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cart = [];
+            const cartIcon = document.getElementById('cartIcon');
+            const cartCount = document.getElementById('cartCount');
+            const cartContainer = document.getElementById('cartContainer');
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            const closeCart = document.getElementById('closeCart');
+            const buyButtons = document.querySelectorAll('.buy-btn');
+
+            // Toggle cart visibility
+            cartIcon.addEventListener('click', function() {
+                cartContainer.classList.toggle('hidden');
+            });
+
+            closeCart.addEventListener('click', function() {
+                cartContainer.classList.add('hidden');
+            });
+
+            // Add to cart functionality
+            buyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const name = this.getAttribute('data-name');
+                    const price = parseFloat(this.getAttribute('data-price'));
+                    
+                    // Add animation
+                    this.classList.add('added');
+                    setTimeout(() => {
+                        this.classList.remove('added');
+                    }, 500);
+
+                    // Add item to cart
+                    addToCart(name, price);
+                });
+            });
+
+            function addToCart(name, price) {
+                // Check if item already exists in cart
+                const existingItem = cart.find(item => item.name === name);
+                
+                if (existingItem) {
+                    existingItem.quantity++;
+                    existingItem.total = existingItem.price * existingItem.quantity;
+                } else {
+                    cart.push({
+                        name: name,
+                        price: price,
+                        quantity: 1,
+                        total: price
+                    });
+                }
+
+                updateCart();
+            }
+
+            function updateCart() {
+                // Update cart count
+                const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCount.textContent = totalItems;
+                
+                if (totalItems > 0) {
+                    cartCount.classList.remove('hidden');
+                } else {
+                    cartCount.classList.add('hidden');
+                }
+
+                // Update cart items list
+                cartItems.innerHTML = '';
+                let grandTotal = 0;
+
+                cart.forEach(item => {
+                    grandTotal += item.total;
+                    
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'cart-item';
+                    itemElement.innerHTML = `
+                        <span>${item.name} x${item.quantity}</span>
+                        <span>€${item.total.toFixed(2)}</span>
+                    `;
+                    cartItems.appendChild(itemElement);
+                });
+
+                // Update total
+                cartTotal.textContent = grandTotal.toFixed(2);
+            }
+        });
+    </script>
+</body>
+</html>
