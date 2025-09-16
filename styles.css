@@ -132,7 +132,7 @@ nav ul li a:hover::after {
 .bg-img {
   height: 100%;
   background: linear-gradient(135deg, rgba(212, 165, 116, 0.8), rgba(139, 69, 19, 0.8)),
-              url("./images/logos/kari.png");
+    url("./images/logos/kari.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -143,8 +143,15 @@ nav ul li a:hover::after {
 }
 
 @keyframes parallaxMove {
-  0%, 100% { background-position: center center; }
-  50% { background-position: center 20px; }
+
+  0%,
+  100% {
+    background-position: center center;
+  }
+
+  50% {
+    background-position: center 20px;
+  }
 }
 
 .cafe-header {
@@ -225,7 +232,8 @@ nav ul li a:hover::after {
 /* Container Styles */
 .container {
   display: flex;
-  align-items: center;
+  align-items: start;
+
   max-width: 1200px;
   margin: 5rem auto;
   padding: 0 2rem;
@@ -268,10 +276,11 @@ nav ul li a:hover::after {
 }
 
 .right-container img {
-  width: 100%;
+  width: 60vh;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  height: 60vh;
 }
 
 .right-container img:hover {
@@ -396,6 +405,7 @@ nav ul li a:hover::after {
 }
 
 /* Two Containers Section */
+
 .dos-containers {
   max-width: 1200px;
   margin: 5rem auto;
@@ -416,10 +426,85 @@ nav ul li a:hover::after {
 
 .img-container {
   flex: 1;
+  /* Equal width with text-container */
+  position: relative;
+  overflow: visible;
+  /* Allow image to extend beyond container */
 }
 
 .img-container img {
-  width: 100%;
+  width: 120%;
+  /* Make image 20% larger than its container */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.img-container img:hover {
+  transform: scale(1.05);
+}
+
+.text-container {
+  flex: 1;
+  /* Equal width with img-container */
+}
+
+.text-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.text-container p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.text-btn {
+  background: #d4a574;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.text-btn:hover {
+  background: #c09660;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 165, 116, 0.3);
+}
+/* .dos-containers {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+}
+
+.images-descriptions {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 5rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.images-descriptions:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.img-container {
+  flex: 1;
+
+}
+
+.img-container img {
+
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -461,7 +546,7 @@ nav ul li a:hover::after {
   background: #c09660;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(212, 165, 116, 0.3);
-}
+} */
 
 /* Form Section */
 .form-container {
@@ -523,7 +608,7 @@ footer {
   margin-top: 5rem;
 }
 
-footer > div {
+footer>div {
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
@@ -604,6 +689,7 @@ details ul li a:hover {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -615,6 +701,7 @@ details ul li a:hover {
     opacity: 0;
     transform: translateX(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -626,6 +713,7 @@ details ul li a:hover {
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -638,31 +726,31 @@ details ul li a:hover {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   nav ul {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .cafe-header h1 {
     font-size: 2.5rem;
   }
-  
+
   .container {
     flex-direction: column;
     gap: 2rem;
   }
-  
+
   .images-descriptions {
     flex-direction: column !important;
     gap: 2rem;
   }
-  
+
   .text-container h1 {
     font-size: 2rem;
   }
-  
-  footer > div {
+
+  footer>div {
     flex-direction: column;
     gap: 2rem;
   }
@@ -686,12 +774,17 @@ img {
 }
 
 /* Hover effects for interactive elements */
-button, .btn, .btn-red, .btn-white, .links {
+button,
+.btn,
+.btn-red,
+.btn-white,
+.links {
   position: relative;
   overflow: hidden;
 }
 
-button::before, .btn::before {
+button::before,
+.btn::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -704,7 +797,8 @@ button::before, .btn::before {
   transition: all 0.6s ease;
 }
 
-button:hover::before, .btn:hover::before {
+button:hover::before,
+.btn:hover::before {
   width: 300px;
   height: 300px;
 }
@@ -715,13 +809,18 @@ button:hover::before, .btn:hover::before {
     opacity: 0;
     transform: translateY(50px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.container, .card, .cafe-container, .images-descriptions, .form-container {
+.container,
+.card,
+.cafe-container,
+.images-descriptions,
+.form-container {
   animation: slideInFromBottom 0.8s ease-out;
 }
 
@@ -731,8 +830,15 @@ button:hover::before, .btn:hover::before {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .card:nth-child(2) {
