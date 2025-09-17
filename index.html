@@ -69,197 +69,44 @@
     <link rel="alternate" hreflang="ca" href="https://stevecoffee.com/ca/">
     <link rel="alternate" hreflang="en" href="https://stevecoffee.com/en/">
     <link rel="alternate" hreflang="x-default" href="https://stevecoffee.com/">
+
+
+    <!--  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="footer.css">
+
+  <link rel="stylesheet" href="work.css">
+  <link rel="icon" href="images/logos/kari.png" type="images/png">
   </head>
 
   <body>
-   <div class="demo-homepages">
-        <!-- <h1>☕ Steve Coffee</h1>
-        <p>Bienvenido a nuestra cafetería premium. Descubre los mejores granos de café del mundo y disfruta de una experiencia única en cada taza.</p> -->
-        
-        <!-- <div class="demo-content">
-            <div class="demo-card">
-                <h3>🌟 Café Premium</h3>
-                <p>Seleccionamos los mejores granos de café de plantaciones sostenibles alrededor del mundo.</p>
+   <!-- <div class="demo-homepages">
+       
+    </div> -->
+<div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                🍪 We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept", you consent to our use of cookies. You can also reject cookies and still use our website with limited functionality.
             </div>
-            
-            <div class="demo-card">
-                <h3>👨‍🍳 Baristas Expertos</h3>
-                <p>Nuestro equipo de baristas certificados prepara cada bebida with passion y precisión.</p>
-            </div>
-            
-            <div class="demo-card">
-                <h3>🏠 Ambiente Acogedor</h3>
-                <p>Un espacio perfecto para trabajar, estudiar o simplemente relajarte con una buena taza de café.</p>
-            </div>
-            
-            <div class="demo-card">
-                <h3>🥐 Repostería Artesanal</h3>
-                <p>Complementa tu café con nuestros pasteles, croissants y dulces hechos diariamente.</p>
-            </div>
-        </div> -->
-    </div>
-
-    <div class="cookie-overlay" id="cookieOverlay">
-        <div class="cookie-banner">
-            <div class="cookie-header">
-                <button class="close-btn" id="closeCookies" ">&times;</button>
-                <h2>Gestión de Cookies</h2>
-                <p>Respetamos tu privacidad y queremos ser transparentes</p>
-            </div>
-            
-            <div class="cookie-content">
-                <div class="cookie-intro">
-                    <h3>¿Qué son las cookies?</h3>
-                    <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas nuestro sitio web. Nos ayudan a mejorar tu experiencia de navegación y a entender cómo interactúas con nuestro contenido.</p>
-                </div>
-
-                <div class="cookie-types">
-                    <h3>Tipos de Cookies que Utilizamos:</h3>
-                    
-                    <div class="cookie-type expanded">
-                        <div class="cookie-type-header" onclick="toggleCookieType(this)">
-                            <h4>🔒 Cookies Necesarias</h4>
-                            <div class="cookie-toggle disabled" data-type="necessary"></div>
-                        </div>
-                        <div class="cookie-type-content">
-                            <p><strong>Propósito:</strong> Esenciales para el funcionamiento básico del sitio web.</p>
-                            <p><strong>Ejemplos:</strong></p>
-                            <ul>
-                                <li>Gestión de sesiones de usuario</li>
-                                <li>Configuración de idioma y región</li>
-                                <li>Funcionamiento del carrito de compras</li>
-                                <li>Seguridad y autenticación</li>
-                            </ul>
-                            <p><strong>Duración:</strong> Sesión o hasta 1 año</p>
-                            <p><em>Estas cookies no se pueden desactivar ya que son necesarias para el funcionamiento del sitio.</em></p>
-                        </div>
-                    </div>
-
-                    <div class="cookie-type">
-                        <div class="cookie-type-header" id="toggleCookies" >
-                            <h4>📊 Cookies Analíticas</h4>
-                            <div class="cookie-toggle" data-type="analytics"></div>
-                        </div>
-                        <div class="cookie-type-content">
-                            <p><strong>Propósito:</strong> Nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web.</p>
-                            <p><strong>Información que recopilamos:</strong></p>
-                            <ul>
-                                <li>Páginas más visitadas</li>
-                                <li>Tiempo de permanencia en el sitio</li>
-                                <li>Rutas de navegación</li>
-                                <li>Información sobre errores técnicos</li>
-                            </ul>
-                            <p><strong>Proveedores:</strong> Google Analytics, Adobe Analytics</p>
-                            <p><strong>Duración:</strong> Hasta 2 años</p>
-                        </div>
-                    </div>
-
-                    <div class="cookie-type">
-                        <div class="cookie-type-header" onclick="toggleCookieType(this)">
-                            <h4>🎯 Cookies de Marketing</h4>
-                            <div class="cookie-toggle" data-type="marketing"></div>
-                        </div>
-                        <div class="cookie-type-content">
-                            <p><strong>Propósito:</strong> Utilizadas para mostrar anuncios relevantes y medir la efectividad de nuestras campañas publicitarias.</p>
-                            <p><strong>Funcionalidades:</strong></p>
-                            <ul>
-                                <li>Personalización de anuncios</li>
-                                <li>Retargeting publicitario</li>
-                                <li>Medición de conversiones</li>
-                                <li>Integración con redes sociales</li>
-                            </ul>
-                            <p><strong>Proveedores:</strong> Facebook Pixel, Google Ads, LinkedIn</p>
-                            <p><strong>Duración:</strong> Hasta 2 años</p>
-                        </div>
-                    </div>
-
-                    <div class="cookie-type">
-                        <div class="cookie-type-header" onclick="toggleCookieType(this)">
-                            <h4>⚙️ Cookies de Funcionalidad</h4>
-                            <div class="cookie-toggle" data-type="functionality"></div>
-                        </div>
-                        <div class="cookie-type-content">
-                            <p><strong>Propósito:</strong> Mejoran la funcionalidad del sitio web y proporcionan funciones personalizadas.</p>
-                            <p><strong>Funciones que habilitan:</strong></p>
-                            <ul>
-                                <li>Recordar preferencias de usuario</li>
-                                <li>Chat en vivo y soporte</li>
-                                <li>Integración con mapas interactivos</li>
-                                <li>Reproducción de contenido multimedia</li>
-                            </ul>
-                            <p><strong>Duración:</strong> Hasta 1 año</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="user-rights">
-                    <h3>🛡️ Tus Derechos Sobre las Cookies</h3>
-                    <p>De acuerdo con el RGPD y la normativa española de protección de datos, tienes los siguientes derechos:</p>
-                    
-                    <div class="rights-grid">
-                        <div class="right-item">
-                            <h5>Derecho de Acceso</h5>
-                            <p>Puedes solicitar información sobre qué cookies estamos utilizando y cómo las procesamos.</p>
-                        </div>
-                        <div class="right-item">
-                            <h5>Derecho de Rectificación</h5>
-                            <p>Puedes modificar tus preferencias de cookies en cualquier momento.</p>
-                        </div>
-                        <div class="right-item">
-                            <h5>Derecho de Supresión</h5>
-                            <p>Puedes eliminar las cookies almacenadas en tu navegador y retirar tu consentimiento.</p>
-                        </div>
-                        <div class="right-item">
-                            <h5>Derecho de Portabilidad</h5>
-                            <p>Puedes solicitar una copia de tus datos en formato estructurado.</p>
-                        </div>
-                        <div class="right-item">
-                            <h5>Derecho de Oposición</h5>
-                            <p>Puedes oponerte al uso de cookies de marketing y funcionalidad.</p>
-                        </div>
-                        <div class="right-item">
-                            <h5>Derecho de Limitación</h5>
-                            <p>Puedes limitar el uso de ciertas categorías de cookies.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-info">
-                    <h4>📧 Delegado de Protección de Datos</h4>
-                    <p><strong>Email:</strong> dpo@stevecoffee.com</p>
-                    <p><strong>Dirección:</strong> Carretera de Rubí, Terrassa, 08223, Barcelona, España</p>
-                    <p><strong>Teléfono:</strong> +34 937 123 456</p>
-                    <p>Para ejercer tus derechos o hacer consultas sobre el tratamiento de datos personales.</p>
-                </div>
-
-                <div class="cookie-actions">
-                    <button class="btn btn-accept-all" id="allCookies" >
-                        ✅ Aceptar Todas
-                    </button>
-                    <button class="btn btn-accept-selected" id="selectedCookies"   >
-                        ⚙️ Guardar Selección
-                    </button>
-                    <button class="btn btn-reject" id="rejectedOpts" >
-                        ❌ Rechazar Opcionales
-                    </button>
-                    <button class="btn btn-settings" id="showAdvanced" >
-                        🔧 Configuración Avanzada
-                    </button>
-                </div>
-
-                <div class="legal-links">
-                    <a href="#privacy">Política de Privacidad</a>
-                    <a href="#terms">Términos de Uso</a>
-                    <a href="#cookies">Política de Cookies</a>
-                    <a href="#contact">Contacto</a>
-                </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn accept-btn" onclick="acceptCookies()">Accept Cookies</button>
+                <button class="cookie-btn reject-btn" onclick="rejectCookies()">Reject Cookies</button>
             </div>
         </div>
     </div>
-    <header>
+
+    <!-- Cookie Status Indicator -->
+    <div class="cookie-status" id="cookieStatus"></div>
+   <header>
     <nav>
-      <a href="tienda.html"><img class="logo" src="images/logos/kari.png" alt="Logo" width="150" /></a>
-  
+      <a href="index.html"><img class="logo" src="images/logos/kari.png" alt="Logo" width="150" /></a>
+      <div class="menu-toggle" id="toggleBar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             
       <ul>
         <li><a href="index.html">Inicia</a></li>
@@ -268,15 +115,15 @@
         <li><a href="tienda.html">Tienda</a></li>
         <li><a href="contacto.html">Contacto</a></li>
 
-        <!-- <div class="logins">
-          <span><i class="fa-solid fa-user"></i></span>
-          <a class="btn">Login</a>
-          <span><i class="fa-solid fa-magnifying-glass"></i></span>
-          <div class="cart-icon" id="cartToggle">
+        <div class="logins">
+          <!-- <span><i class="fa-solid fa-user"></i></span> -->
+          <a href="login.html" class="btn">Login</a>
+          <!-- <span><i class="fa-solid fa-magnifying-glass"></i></span> -->
+          <!-- <div class="cart-icon" id="cartToggle">
             <i class="fa-solid fa-shopping-cart"></i>
             <span class="cart-count" id="cart-count">0</span>
-          </div>
-        </div> -->
+          </div> -->
+        </div>
       </ul>
     </nav>
   </header>
@@ -561,8 +408,11 @@
         </div>
       </div>
     </footer>
-    <script src="main.js"></script>
+  <script src="main.js"></script>
+    
+
     <script src="form.js"></script>
-    <script src="cookies.js"></script>
+    <script src="work.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

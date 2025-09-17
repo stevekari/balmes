@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website - Cookie Consent</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Cookie Banner Styles */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .cookie-banner.show {
+            transform: translateY(0);
+        }
+
+        .cookie-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cookie-text {
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cookie-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            min-width: 100px;
+        }
+
+        .accept-btn {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .accept-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .reject-btn {
+            background: #f44336;
+            color: white;
+        }
+
+        .reject-btn:hover {
+            background: #da190b;
+            transform: translateY(-2px);
+        }
+
+        /* Main Website Content */
+        .website-content {
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .website-content.show {
+            opacity: 1;
+        }
+
+        .header {
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .content-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .content-section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        /* Cookie Status Indicator */
+        .cookie-status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .cookie-status.show {
+            opacity: 1;
+        }
+
+        .status-accepted {
+            background: rgba(76, 175, 80, 0.8);
+        }
+
+        .status-rejected {
+            background: rgba(244, 67, 54, 0.8);
+        }
+
+        @media (max-width: 600px) {
+            .cookie-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cookie-btn {
+                width: 200px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                🍪 We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept", you consent to our use of cookies. You can also reject cookies and still use our website with limited functionality.
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn accept-btn" onclick="acceptCookies()">Accept Cookies</button>
+                <button class="cookie-btn reject-btn" onclick="rejectCookies()">Reject Cookies</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Status Indicator -->
+    <div class="cookie-status" id="cookieStatus"></div>
+
+    <!-- Main Website Content -->
+    <div class="website-content" id="websiteContent">
+        <div class="header">
+            <h1>Welcome to My Website</h1>
+            <p>Your awesome web experience starts here</p>
+        </div>
+
+        <div class="content-section">
+            <h2>About Our Website</h2>
+            <p>This is your main website content that becomes visible after the user makes a choice about cookies. You can now browse freely and enjoy all the features we have to offer.</p>
+            <p>We respect your privacy choices and provide a great experience regardless of your cookie preferences.</p>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>🚀 Fast Performance</h3>
+                <p>Lightning-fast loading times and smooth user experience</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔒 Privacy Focused</h3>
+                <p>Your privacy matters to us. We're transparent about our data usage</p>
+            </div>
+            <div class="feature-card">
+                <h3>📱 Mobile Friendly</h3>
+                <p>Perfectly optimized for all devices and screen sizes</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Cookie Preference</h2>
+            <p>You can change your cookie preferences at any time by refreshing the page. We store your choice temporarily for this session.</p>
+            <button onclick="resetCookieChoice()" style="background: rgba(255,255,255,0.2); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px;">Reset Cookie Choice</button>
+        </div>
+    </div>
+
+    <script>
+        // Cookie consent state
+        let cookieChoice = null;
+
+        // Check if user has already made a choice (for this session)
+        function checkCookieConsent() {
+            // In a real implementation, you might check localStorage or a cookie here
+            // For this demo, we'll show the banner on first visit
+            if (cookieChoice === null) {
+                showCookieBanner();
+            } else {
+                showWebsite();
+            }
+        }
+
+        // Show cookie banner
+        function showCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            banner.classList.add('show');
+        }
+
+        // Hide cookie banner and show website
+        function hideCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            banner.classList.remove('show');
+            showWebsite();
+        }
+
+        // Show main website content
+        function showWebsite() {
+            const content = document.getElementById('websiteContent');
+            const status = document.getElementById('cookieStatus');
+            
+            // Add a small delay for smooth transition
+            setTimeout(() => {
+                content.classList.add('show');
+                status.classList.add('show');
+            }, 300);
+        }
+
+        // Accept cookies
+        function acceptCookies() {
+            cookieChoice = 'accepted';
+            
+            // Update status indicator
+            const status = document.getElementById('cookieStatus');
+            status.textContent = '✅ Cookies Accepted';
+            status.classList.add('status-accepted');
+            
+            // In a real implementation, you would:
+            // - Set cookies/localStorage to remember choice
+            // - Enable analytics/tracking scripts
+            // - Load additional functionality
+            
+            hideCookieBanner();
+            
+            // Simulate cookie being set (in real implementation, you'd actually set cookies)
+            console.log('Cookies accepted - enabling full functionality');
+        }
+
+        // Reject cookies
+        function rejectCookies() {
+            cookieChoice = 'rejected';
+            
+            // Update status indicator
+            const status = document.getElementById('cookieStatus');
+            status.textContent = '❌ Cookies Rejected';
+            status.classList.add('status-rejected');
+            
+            // In a real implementation, you would:
+            // - Remember choice without using cookies (maybe sessionStorage)
+            // - Disable analytics/tracking scripts
+            // - Run in privacy mode
+            
+            hideCookieBanner();
+            
+            console.log('Cookies rejected - running in privacy mode');
+        }
+
+        // Reset cookie choice (for demo purposes)
+        function resetCookieChoice() {
+            cookieChoice = null;
+            location.reload();
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            checkCookieConsent();
+        });
+
+        // Handle escape key to close banner (accessibility)
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && cookieChoice === null) {
+                rejectCookies(); // Default to reject on escape
+            }
+        });
+    </script>
+</body>
+</html>

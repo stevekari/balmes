@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="style.css" />
     <!-- <link rel="stylesheet" href="styles.css" /> -->
     <link rel="stylesheet" href="footer.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <link rel="stylesheet" href="nosotros.css">
     <link rel="icon" href="images/logos/kari.png" type="images/png">
-    <style>
+    <!-- <style>
       .img-container,
       .first-texto,
       .second-textoimg {
@@ -35,34 +37,38 @@
         width: 800px;
         text-align: justify;
         margin-bottom: 20px;
-      }
+      } -->
     </style>
   </head>
   <body>
     <header>
-      <nav>
-        <img class="logo" src="images/logos/kari.png" alt="" />
-        <div class="menu-toggle" id="toggleBar">
+    <nav>
+      <a href="index.html"><img class="logo" src="images/logos/kari.png" alt="Logo" width="150" /></a>
+      <div class="menu-toggle" id="toggleBar">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </div> 
             
-        <ul>
-          <li><a href="index.html">Inicia</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="cafe.html">Cafe</a></li>
-          <li><a href="tienda.html">Tienda</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+      <ul>
+        <li><a href="index.html">Inicia</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="cafe.html">Cafe</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
 
-          <!-- <div class="logins">
-            <span><i class="fa-solid fa-u0ser"></i></span>
-            <a class="btn" href="login.html">Login</a>
-            <span><i class="fa-solid fa-magnifying-glass"></i></span>
-          </div> -->
-        </ul>
-      </nav>
-    </header>
+        <div class="logins">
+          <span><i class="fa-solid fa-user"></i></span>
+          <a class="btn">Login</a>
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+          <div class="cart-icon" id="cartToggle">
+            <i class="fa-solid fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-count">0</span>
+          </div>
+        </div>
+      </ul>
+    </nav>
+  </header>
     <div class="container">
       <div class="texto-hostoria">
         <div class="first-texto">
@@ -173,5 +179,11 @@
             </div>
         </div>
     </footer>
+
+     <script src="main.js"></script>
+    <script src="index.js"></script>
+    <script src="nosotros.js"></script>
+    <script src="form.js"></script>
+</body>
   </body>
 </html>

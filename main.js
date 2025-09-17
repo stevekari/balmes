@@ -174,11 +174,4 @@
 
 
 
-    // Responsive nav toggle
-const toggleBar = document.getElementById('toggleBar');
-const navMenu = document.querySelector('nav ul');
-
-toggleBar.addEventListener('click', () => {
-  navMenu.classList.toggle('open');
-  toggleBar.classList.toggle('active');
-});
+ 

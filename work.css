@@ -1,0 +1,195 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+
+
+ /* Cookie Banner Styles */
+ .cookie-banner {
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     background: rgba(0, 0, 0, 0.95);
+     color: white;
+     padding: 20px;
+     text-align: center;
+     z-index: 1000;
+     backdrop-filter: blur(10px);
+     transform: translateY(100%);
+     transition: transform 0.3s ease;
+ }
+
+ .cookie-banner.show {
+     transform: translateY(0);
+ }
+
+ .cookie-content {
+     max-width: 800px;
+     margin: 0 auto;
+ }
+
+ .cookie-text {
+     margin-bottom: 15px;
+     font-size: 14px;
+     line-height: 1.5;
+ }
+
+ .cookie-buttons {
+     display: flex;
+     gap: 10px;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+
+ .cookie-btn {
+     padding: 10px 20px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 14px;
+     font-weight: bold;
+     transition: all 0.3s ease;
+     min-width: 100px;
+ }
+
+ .accept-btn {
+     background: #4CAF50;
+     color: white;
+ }
+
+ .accept-btn:hover {
+     background: #45a049;
+     transform: translateY(-2px);
+ }
+
+ .reject-btn {
+     background: #f44336;
+     color: white;
+ }
+
+ .reject-btn:hover {
+     background: #da190b;
+     transform: translateY(-2px);
+ }
+
+ /* Main Website Content */
+ .website-content {
+     padding: 40px 20px;
+     text-align: center;
+     color: white;
+     opacity: 0;
+     transition: opacity 0.5s ease;
+ }
+
+ .website-content.show {
+     opacity: 1;
+ }
+
+ .header {
+     margin-bottom: 40px;
+ }
+
+ .header h1 {
+     font-size: 3em;
+     margin-bottom: 10px;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+ }
+
+ .header p {
+     font-size: 1.2em;
+     opacity: 0.9;
+ }
+
+ .content-section {
+     max-width: 800px;
+     margin: 0 auto 40px;
+     background: rgba(255, 255, 255, 0.1);
+     padding: 30px;
+     border-radius: 15px;
+     backdrop-filter: blur(10px);
+ }
+
+ .content-section h2 {
+     font-size: 2em;
+     margin-bottom: 20px;
+     color: #fff;
+ }
+
+ .content-section p {
+     font-size: 1.1em;
+     line-height: 1.6;
+     margin-bottom: 15px;
+ }
+
+ .features {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 20px;
+     margin-top: 40px;
+ }
+
+ .feature-card {
+     background: rgba(255, 255, 255, 0.1);
+     padding: 20px;
+     border-radius: 10px;
+     backdrop-filter: blur(10px);
+     transition: transform 0.3s ease;
+ }
+
+ .feature-card:hover {
+     transform: translateY(-5px);
+ }
+
+ .feature-card h3 {
+     margin-bottom: 10px;
+     color: #fff;
+ }
+
+ /* Cookie Status Indicator */
+ .cookie-status {
+     position: fixed;
+     top: 20px;
+     right: 20px;
+     background: rgba(255, 255, 255, 0.2);
+     color: white;
+     padding: 10px 15px;
+     border-radius: 20px;
+     backdrop-filter: blur(10px);
+     font-size: 12px;
+     opacity: 0;
+     transition: opacity 0.3s ease;
+ }
+
+ .cookie-status.show {
+     opacity: 1;
+ }
+
+ .status-accepted {
+     background: rgba(76, 175, 80, 0.8);
+ }
+
+ .status-rejected {
+     background: rgba(244, 67, 54, 0.8);
+ }
+
+ @media (max-width: 600px) {
+     .cookie-buttons {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .cookie-btn {
+         width: 200px;
+     }
+
+     .header h1 {
+         font-size: 2em;
+     }
+
+     .content-section {
+         padding: 20px;
+     }
+ }
